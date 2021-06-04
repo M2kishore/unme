@@ -1,3 +1,5 @@
+This aims aims for atmost privacy to chat with your friends without any issue
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
