@@ -1,4 +1,4 @@
-This aims aims for atmost privacy to chat with your friends without any issue
+This app aims for atmost privacy to chat with your friends without any issue
 
 # Getting Started with Create React App
 
