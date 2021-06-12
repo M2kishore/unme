@@ -6,10 +6,8 @@ const Navbar = () => {
     return (
         <nav className="nav-wrapper blue-grey lighten-5 ">
         <NavLink to='/' className="left"><img src={Logo} alt="logo" className="navbar-logo" width="250" height="70"/></NavLink>
-            <div className="container">
                 <SignedInLinks />
                 <SignedOutLinks />
-            </div>
         </nav>
     );
 }

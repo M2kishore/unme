@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/layout/Navbar';
-import Post from './components/posts/Post';
+import PostList from './components/posts/PostList';
+import FriendList from './components/whereabout/FriendList';
 import {Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route path='/' exact ><br /><Post/></Route>
+            <Route path='/' exact ><br /><PostList /></Route>
+            <Route path='/whereabout' exact ><br /><FriendList /></Route>
           </Switch>
         </div>
       </div>
