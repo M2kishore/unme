@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/layout/Navbar';
+import Post from './components/posts/Post';
 import {Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route></Route>
+            <Route path='/' exact ><br /><Post/></Route>
           </Switch>
         </div>
       </div>
