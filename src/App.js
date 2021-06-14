@@ -1,8 +1,9 @@
-import './App.css';
 import Navbar from './components/layout/Navbar';
 import PostList from './components/posts/PostList';
-import FriendList from './components/whereabout/FriendList';
 import {Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Footer from './components/layout/Footer'
+import WhereAbout from './components/whereabout/WhereAbout';
+
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
         <div className="content">
           <Switch>
             <Route path='/' exact ><br /><PostList /></Route>
-            <Route path='/whereabout' exact ><br /><FriendList /></Route>
+            <Route path='/whereabout' exact ><br /><WhereAbout /></Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
   );

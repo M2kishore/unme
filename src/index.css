@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.row{
+  margin: 0 !important;
+}
+.card-panel {
+  margin: 0 !important;
+}
+.date-font{
+  font-family: 'Meie Script', cursive;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.63);
+}
+.page-footer{
+
+}
+
+
