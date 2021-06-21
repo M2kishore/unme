@@ -1,8 +1,9 @@
+import ProfilePic from '../../assets/profilepic.jpg'
 const UserText = () => {
     return ( 
         <div className="card user-text  grey lighten-5">
-            <span className="title">My picture</span>
-            <p> Message that I have wrtten to you</p>
+            <span><img className="circle" src={ProfilePic} height="20" width="20"/>
+            <p> Message that I have wrtten to you</p></span>
         </div>
      );
 }

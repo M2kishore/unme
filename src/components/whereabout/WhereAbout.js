@@ -1,7 +1,14 @@
+import { useEffect } from "react"
 import ChatArea from "./ChatArea"
 import FriendList from "./FriendList"
 
-const WhereAbout = () => {
+const WhereAbout = ({setIsFooterPresent}) => {
+    useEffect(() => {
+        setIsFooterPresent(false);
+        return (() => {
+            setIsFooterPresent(true);
+        })
+    })
     return ( 
         <div className="whreabout row container">
             <div className="col s12 m5">

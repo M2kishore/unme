@@ -22,13 +22,19 @@ code {
   font-size: 40px;
   color: rgba(0, 0, 0, 0.63);
 }
-.create-post select {
+.create-post select{
   width: 30%;
   padding: 6px 10px;
+  padding-left: 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 10px solid 26a69a;
   box-sizing: border-box;
   display: block;
 }
 
-
+.create-post label{
+  padding-left: 10px;
+}
+.post-content p{
+  font-size: large;
+}

@@ -29,10 +29,12 @@ const CreatePost = () => {
                         id='title'
                         onChange={(e) => setTitle(e.target.value)}
                     />
-                    <label htmlFor="title">Blog title</label>
+                    <label htmlFor="title">Memory title</label>
                 </div>
                 <div className="input-field">
                     <textarea
+                    className= "materialize-textarea"
+                    data-length="120"
                         required
                         value={body}
                         onChange={(e) => setBody(e.target.value)} />
@@ -139,9 +141,10 @@ const CreatePost = () => {
                     </select>
                 </div>
 
-                {!isPending && <button className="btn pink lighten-1">Add Memory</button>}
-                {isPending && <button className="btn pink lighten-1">Adding Memory</button>}
+                {!isPending && <button className="btn waves-effect waves-light z-depth-0">Add Memory</button>}
+                {isPending && <button className="btn waves-effect waves-light z-depth-0">Adding Memory</button>}
             </form>
+            <br/>
         </div>
     );
 }

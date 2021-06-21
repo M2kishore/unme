@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
           <div className="footer-copyright">
             <div className="container grey-text ">
-              © 2014 Copyright HD
+              © 2021 Copyright HD
             </div>
           </div>
         </footer>
