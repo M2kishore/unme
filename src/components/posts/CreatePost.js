@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
+import ImageUpload from "./ImageUpload";
 const CreatePost = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('');
     const [date, setDate] = useState({
         year: "00",
         month: "00",
@@ -23,6 +23,7 @@ const CreatePost = () => {
         <div className="create-post container">
             <h3>Add Your Memory</h3>
             <form onSubmit={handleSubmit}>
+                <ImageUpload />
                 <div className="input-field">
                     <input type="text"
                         required
@@ -33,8 +34,8 @@ const CreatePost = () => {
                 </div>
                 <div className="input-field">
                     <textarea
-                    className= "materialize-textarea"
-                    data-length="120"
+                        className="materialize-textarea"
+                        data-length="120"
                         required
                         value={body}
                         onChange={(e) => setBody(e.target.value)} />
@@ -80,8 +81,9 @@ const CreatePost = () => {
                         value={date.month}
                         onChange={(e) => setDate({
                             ...date,
-                            month: e.target.value}
-                            )}
+                            month: e.target.value
+                        }
+                        )}
                     >
                         <option value="01">January</option>
                         <option value="02">February</option>
@@ -144,7 +146,7 @@ const CreatePost = () => {
                 {!isPending && <button className="btn waves-effect waves-light z-depth-0">Add Memory</button>}
                 {isPending && <button className="btn waves-effect waves-light z-depth-0">Adding Memory</button>}
             </form>
-            <br/>
+            <br />
         </div>
     );
 }
