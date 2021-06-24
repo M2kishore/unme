@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router';
-
-const SignIn = () => {
+import { connect } from 'react-redux';
+const SignIn = ({email, password, dispatch}) => {
     const [person, setPerson] = useState({
         email:"",
         password:""
@@ -10,12 +10,16 @@ const SignIn = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(person);
+        console.log(email+'  '+password);
         if(person.email === "q@w.e" && person.password === 'q'){
             history.push('/');
         }
     }
     return (
         <div className="sign-in container">
+        {
+            () => {dispatch({ type: "INC" })}
+        }
             <h3>Sign In</h3>
             <form onSubmit={handleSubmit}>
             <div className="input-field">
@@ -35,6 +39,7 @@ const SignIn = () => {
             </div>
             <div className="input-field">
                 <button type="submit" className="btn">Submit</button>
+                <button className="btn" onClick={() => dispatch({ type: "INC" })}>Dispatch</button>
             </div>
 
             </form>
@@ -42,4 +47,8 @@ const SignIn = () => {
     )
 }
 
-export default SignIn;
+const mapStateToProps = state => ({
+    ...state
+  });
+
+export default connect(mapStateToProps)(SignIn);
