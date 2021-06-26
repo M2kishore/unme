@@ -2,9 +2,7 @@ import authReducer from "./authReducer";
 import postReducer from "./postReducer";
 import { combineReducers } from 'redux';
 
-const rootReducer = combineReducers({
+export default combineReducers({
     auth: authReducer,
-    project: postReducer
-});
-
-export default rootReducer;
+    posts: postReducer
+});;

@@ -1,9 +1,10 @@
 const initState = {
     posts: [
         {
-            imageURL: '../../assets/postpic.jpg',
-            cardTitle: 'Redux Memory',
-            cardContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas repudiandae tempore molestiae tempora, perferendis quo, quis vel sunt, assumenda qui nam? Eaque quae quis vel corporis accusantium quas cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto eos aliquam? Ipsum, ipsa fugiat fugit magni nesciunt deleniti tenetur facilis inventore cumque, accusantium soluta? Quod suscipit eum accusamus exercitationem.',
+            id: 1,
+            imageURL: 'https://quotesnhumor.com/wp-content/uploads/2018/03/Best-Friend-Quotes-True-Friendship-Starts-here.jpg',
+            title: 'Redux Memory',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas repudiandae tempore molestiae tempora, perferendis quo, quis vel sunt, assumenda qui nam? Eaque quae quis vel corporis accusantium quas cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto eos aliquam? Ipsum, ipsa fugiat fugit magni nesciunt deleniti tenetur facilis inventore cumque, accusantium soluta? Quod suscipit eum accusamus exercitationem.',
             date: {
                 year: '20',
                 month: '05',
@@ -11,9 +12,10 @@ const initState = {
             }
         },
         {
-            imageURL: '../../assets/postpic.jpg',
-            cardTitle: 'Redux Memory',
-            cardContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas repudiandae tempore molestiae tempora, perferendis quo, quis vel sunt, assumenda qui nam? Eaque quae quis vel corporis accusantium quas cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto eos aliquam? Ipsum, ipsa fugiat fugit magni nesciunt deleniti tenetur facilis inventore cumque, accusantium soluta? Quod suscipit eum accusamus exercitationem.',
+            id: 2,
+            imageURL: 'https://colleenmichele.com/wp-content/uploads/2021/03/sloth-balloons.jpg',
+            title: 'Redux Memory',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas repudiandae tempore molestiae tempora, perferendis quo, quis vel sunt, assumenda qui nam? Eaque quae quis vel corporis accusantium quas cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto eos aliquam? Ipsum, ipsa fugiat fugit magni nesciunt deleniti tenetur facilis inventore cumque, accusantium soluta? Quod suscipit eum accusamus exercitationem.',
             date: {
                 year: '20',
                 month: '05',
@@ -21,9 +23,10 @@ const initState = {
             }
         },
         {
-            imageURL: '../../assets/postpic.jpg',
-            cardTitle: 'Redux Memory',
-            cardContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas repudiandae tempore molestiae tempora, perferendis quo, quis vel sunt, assumenda qui nam? Eaque quae quis vel corporis accusantium quas cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto eos aliquam? Ipsum, ipsa fugiat fugit magni nesciunt deleniti tenetur facilis inventore cumque, accusantium soluta? Quod suscipit eum accusamus exercitationem.',
+            id: 3,
+            imageURL: 'https://image.shutterstock.com/image-photo/couple-walking-bikes-together-on-260nw-579776500.jpg',
+            title: 'Redux Memory',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas repudiandae tempore molestiae tempora, perferendis quo, quis vel sunt, assumenda qui nam? Eaque quae quis vel corporis accusantium quas cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto eos aliquam? Ipsum, ipsa fugiat fugit magni nesciunt deleniti tenetur facilis inventore cumque, accusantium soluta? Quod suscipit eum accusamus exercitationem.',
             date: {
                 year: '20',
                 month: '05',
@@ -33,11 +36,7 @@ const initState = {
     ]
 }
 
-const initAction = {
-    type: ''
-}
-
-const postReducer = (state = initState, action = initAction) => {
+const postReducer = (state = initState, action) => {
     switch (action.type) {
         case 'CREATE_PROJECT_SUCCESS':
             console.log('create project success');
@@ -49,3 +48,5 @@ const postReducer = (state = initState, action = initAction) => {
             return state;
     }
 }
+
+export default postReducer;
