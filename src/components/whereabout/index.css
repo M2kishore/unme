@@ -1,0 +1,10 @@
+.text-message{
+    border-radius: 50px;
+}
+.text-message > span{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.text-message p{
+    padding-left: 14px;
+}
