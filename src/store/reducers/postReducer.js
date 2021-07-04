@@ -1,3 +1,8 @@
+import {
+    GET_SUCCESSFUL,
+    GET_FAILED,
+    GET_GETTING
+} from '../types/types'
 const initState = {
     posts: [
         {
@@ -38,11 +43,14 @@ const initState = {
 
 const postReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'CREATE_PROJECT_SUCCESS':
-            console.log('create project success');
+        case GET_GETTING:
+            console.log('Wait rasa fetching pandromla');
             return state;
-        case 'CREATE_PROJECT_ERROR':
-            console.log('create project error');
+        case GET_SUCCESSFUL:
+            console.log('Kedachutu!');
+            return state;
+        case GET_FAILED:
+            console.log('ada poda dei');
             return state;
         default:
             return state;
