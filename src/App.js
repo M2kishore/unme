@@ -16,7 +16,7 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route path='/whereabout'><br /><WhereAbout setIsFooterPresent={setIsFooterPresent} /></Route>
+            <Route path='/whereabout'><br /><WhereAbout /></Route>
             <Route path='/create'><br /><CreatePost /></Route>
             <Route path='/signin'><br /><SignIn /></Route>
             <Route path='/signup'><br /><SignUp /></Route>
