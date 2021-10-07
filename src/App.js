@@ -16,12 +16,12 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route path='/whereabout'><br /><WhereAbout /></Route>
+            <Route path='/chat'><br /><WhereAbout /></Route>
             <Route path='/create'><br /><CreatePost /></Route>
             <Route path='/signin'><br /><SignIn /></Route>
             <Route path='/signup'><br /><SignUp /></Route>
             <div>
-              <Route path='/' exact ><br /><PostList /></Route>
+              <Route path='/whereabout' exact ><br /><PostList /></Route>
               <Footer />
             </div>
           </Switch>

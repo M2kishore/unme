@@ -1,5 +1,11 @@
-import { useHistory } from 'react-router';
-import { useState } from 'react';
+import { useHistory, Link} from 'react-router';
+import { useState, useEffect} from 'react';
+import { useAuthState } from "react-firebase-hooks/auth";
+import {
+    auth,
+    registerWithEmailAndPassword,
+    signInWithGoogle
+} from '../../firebase/Firebase'
 
 const SignUp = () => {
     const [person, setPerson] = useState({
@@ -8,11 +14,18 @@ const SignUp = () => {
         email:"",
         password:""
     });
+    const [user, loading, error] = useAuthState(auth);
     const history = useHistory();
+
+    useEffect(() => {
+        if (loading) return;
+        if (user) history.replace("/whereabout");
+      }, [user, loading]);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(person);
-        history.push('/');
+        registerWithEmailAndPassword(person);
     }
     return (
         <div className="sign-in container">
@@ -49,6 +62,9 @@ const SignUp = () => {
             </div>
             <div className="input-field">
                 <button type="submit" className="btn">Submit</button>
+            </div>
+            <div className="input-field">
+                <button className="btn" onClick={signInWithGoogle}>SignIn With Google</button>
             </div>
 
             </form>

@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { connect } from 'react-redux';
+import firebase from 'firebase';
 const SignIn = () => {
     const [person, setPerson] = useState({
         email: "",
@@ -10,9 +11,12 @@ const SignIn = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(person);
-        if (person.email === "q@w.e" && person.password === 'q') {
-            history.push('/');
-        }
+        firebase.auth().signInWithEmailAndPassword(person.email,person.password).then((response) => {
+            console.log("user at firebase",response);
+            history.push('/whereabout');
+        }).catch((error) => {
+            console.log("error",e);
+        })
     }
     return (
         <div className="sign-in container">
@@ -41,9 +45,7 @@ const SignIn = () => {
         </div>
     )
 }
-
 const mapStateToProps = state => ({
     state: state.posts.posts
 });
-
 export default connect(mapStateToProps)(SignIn);
