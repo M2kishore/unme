@@ -1,8 +1,8 @@
-This app aims for atmost privacy to chat with your friends without any advertisements
+This app aims to create a gallery of memories for you and your friend.
 # Features
   * Users can upload their memories with a side note to remember the best of their moments.
-  * Users can chat each-other.
+  * No pressurizing likes or comments just a memory to remember between you and your friend.
  ## Front-end
- * React
+ * React, materialize-css
  ## Backend
  * Firebase
