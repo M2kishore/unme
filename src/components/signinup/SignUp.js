@@ -19,7 +19,14 @@ const SignUp = () => {
 
     useEffect(() => {
         if (loading) return;
-        if (user) history.replace("/whereabout");
+        if (user){
+            console.log(user);
+            //history.replace("/whereabout");
+        } 
+        if(error){
+            console.warn(error);
+
+        }
       }, [user, loading]);
 
     const handleSubmit = (e) => {
