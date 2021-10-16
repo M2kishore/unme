@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { connect } from "react-redux";
 import firebase from "firebase";
-import { signInWithGoogle } from "../../firebase/Firebase";
 const SignIn = () => {
   const [person, setPerson] = useState({
     email: "",
@@ -17,8 +16,7 @@ const SignIn = () => {
       .signInWithEmailAndPassword(person.email, person.password)
       .then((response) => {
         console.table(response);
-
-        //history.push('/whereabout');
+        history.push('/whereabout');
       })
       .catch((error) => {
         alert(error);
@@ -53,14 +51,10 @@ const SignIn = () => {
         </div>
         <div className="input-field">
           <button type="submit" className="btn">
-            Submit
+            Sign In
           </button>
         </div>
-        <div className="input-field">
-          <button className="btn" onClick={signInWithGoogle}>
-            SignIn With Google
-          </button>
-        </div>
+        <h6></h6>
       </form>
     </div>
   );

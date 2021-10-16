@@ -3,8 +3,7 @@ import { useState, useEffect} from 'react';
 import { useAuthState } from "react-firebase-hooks/auth";
 import {
     auth,
-    registerWithEmailAndPassword,
-    signInWithGoogle
+    registerWithEmailAndPassword
 } from '../../firebase/Firebase'
 
 const SignUp = () => {
@@ -70,10 +69,6 @@ const SignUp = () => {
             <div className="input-field">
                 <button type="submit" className="btn">Submit</button>
             </div>
-            <div className="input-field">
-                <button className="btn" onClick={signInWithGoogle}>SignIn With Google</button>
-            </div>
-
             </form>
         </div>
     )
