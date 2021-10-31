@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import Navbar from './components/layout/Navbar';
 import PostList from './components/posts/PostList';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';

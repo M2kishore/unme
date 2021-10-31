@@ -1,3 +1,4 @@
+import React from 'react';
 import ProfilePic from '../../assets/profilepic.jpg'
 import './index.css'
 const FriendText = () => {

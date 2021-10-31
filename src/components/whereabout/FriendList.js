@@ -1,5 +1,5 @@
+import React from 'react'
 import FriendSummary from "./FriendSummary";
-
 const FriendList = () => {
     return (
         <div className="friend-list">

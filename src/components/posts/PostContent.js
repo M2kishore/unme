@@ -1,4 +1,4 @@
-
+import React from 'react';
 const PostContent = ({title, content}) => {
     return (
         <div className="card-reveal post-content flow-text">

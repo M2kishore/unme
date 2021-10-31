@@ -1,3 +1,4 @@
+import React from 'react';
 import PostPic from '../../assets/postpic.jpg'
 import { MdClose, MdMoreVert } from 'react-icons/md'
 import PostContent from './PostContent';

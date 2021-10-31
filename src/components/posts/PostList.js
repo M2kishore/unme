@@ -1,3 +1,4 @@
+import React from 'react'
 import Post from './Post';
 import { connect } from 'react-redux';
 import { fetchUsers } from '../../store/actions/postActions'

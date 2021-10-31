@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 import FriendText from "./FriendText"
 import UserText from "./UserText"
 

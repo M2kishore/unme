@@ -1,7 +1,7 @@
+import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
-import {useState, useEffect} from 'react';
 import Logo from '../../assets/logo.png'
 import {FaHamburger} from 'react-icons/fa'
 import M from 'materialize-css';
