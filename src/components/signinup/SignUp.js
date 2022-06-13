@@ -1,5 +1,4 @@
 import React,{ useState, useEffect} from 'react';
-import { useHistory, Link} from 'react-router';
 import { useAuthState } from "react-firebase-hooks/auth";
 import {
     auth,
@@ -14,7 +13,6 @@ const SignUp = () => {
         password:""
     });
     const [user, loading, error] = useAuthState(auth);
-    const history = useHistory();
 
     useEffect(() => {
         if (loading) return;
@@ -26,7 +24,7 @@ const SignUp = () => {
             console.warn(error);
 
         }
-      }, [user, loading]);
+      }, [user, loading, error]);
 
     const handleSubmit = (e) => {
         e.preventDefault();

@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from "react";
+import React,{ useState} from "react";
 import { useHistory } from "react-router";
 import { connect } from "react-redux";
 import firebase from "firebase";
@@ -54,7 +54,6 @@ const SignIn = () => {
             Sign In
           </button>
         </div>
-        <h6></h6>
       </form>
     </div>
   );

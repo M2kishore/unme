@@ -1,9 +1,8 @@
-import React,{ useState } from 'react';
+import React from 'react';
 import Navbar from './components/layout/Navbar';
 import PostList from './components/posts/PostList';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Footer from './components/layout/Footer'
-import WhereAbout from './components/whereabout/WhereAbout';
 import CreatePost from './components/posts/CreatePost';
 import SignIn from './components/signinup/SignIn';
 import SignUp from './components/signinup/SignUp';
@@ -16,7 +15,6 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route path='/chat'><br /><WhereAbout /></Route>
             <Route path='/create'><br /><CreatePost /></Route>
             <Route path='/signin'><br /><SignIn /></Route>
             <Route path='/signup'><br /><SignUp /></Route>

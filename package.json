@@ -32,7 +32,7 @@
       "react-app",
       "react-app/jest"
     ],
-    "rules":{
+    "rules": {
       "react/react-in-jsx-scope": "off"
     }
   },
@@ -47,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "web-vitals": "^2.1.4"
   }
 }

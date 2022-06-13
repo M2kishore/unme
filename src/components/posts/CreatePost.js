@@ -1,5 +1,4 @@
 import React,{ useState } from "react";
-import { useHistory } from "react-router";
 import ImageUpload from "./ImageUpload";
 const CreatePost = () => {
     const [title, setTitle] = useState('');
@@ -10,7 +9,7 @@ const CreatePost = () => {
         day: "00"
     });
     const [isPending, setIsPending] = useState(false);
-    const history = useHistory();
+    //const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();

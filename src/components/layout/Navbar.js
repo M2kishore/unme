@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
@@ -11,6 +11,8 @@ const Navbar = () => {
         var elems = document.querySelectorAll('.sidenav');
         M.Sidenav.init(elems);
     });
+    //in testing phase
+    setIsSignedIn(false);
     return (
         <nav className="nav-wrapper blue-grey lighten-5 ">
         <div className="nav-wrapper">

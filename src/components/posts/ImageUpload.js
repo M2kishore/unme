@@ -24,7 +24,7 @@ class ImageUpload extends Component {
                 <div class="file-path-wrapper">
                     <input className="file-path validate" type="text" />
                 </div>
-                    <img src={this.state.file} width="200" height="200"/>
+                    <img src={this.state.file} width="200" height="200" alt='upload_img'/>
                 </div>
                 )
     }
